@@ -12,18 +12,15 @@ class Ans {
                     ans.add(arr[j]);
                 }
                 j++;
-                ans.add(arr[j]);
+                
             } 
             else if (j - i + 1 == k) {
-                if (arr[j] < 0) {
-                    ans.add(arr[j]);
-
-                    break;
-                } else {
-                    ans.add(0);
-                }
                 i++;
                 j++;
+                if(arr[i]<0){
+                    ans.add(arr[i]);
+                    break;
+                }
             }
         }
         System.out.println(ans);
