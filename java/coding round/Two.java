@@ -11,6 +11,7 @@ public class Two {
             map.put(8, 0);
 
             long currNumber = i;
+            //to extract each number
             while (currNumber > 0) {
                 int d = (int) currNumber % 10;
                 if (map.containsKey(d))
@@ -26,7 +27,7 @@ public class Two {
     }
 
     public static void main(String[] args) {
-        int n = 9899;
+        int n = 1248;
         System.out.println(two_four(n));
     }
 }
