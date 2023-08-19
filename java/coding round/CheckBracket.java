@@ -10,8 +10,11 @@ public class CheckBracket {
         for (int i = 0; i < ans.length; i++) {
             if (ans[i] == '(') {
                 s.push(ans[i]);
-            } else if (ans[i] == ')') {
-                s.push(ans[i]);
+            } else if (ans[i] == ')' && !s.isEmpty()) {
+                s.pop();
+            } else if (ans[i] == ')' && s.isEmpty()) {
+                System.out.println("false");
+                return;
             }
         }
         if (s.isEmpty()) {
