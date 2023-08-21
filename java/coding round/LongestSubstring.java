@@ -2,15 +2,18 @@ import java.util.*;
 
 class Main {
     public static int func(String s) {
+        int[] a= new int[5];
+        
+
         HashSet<Character> set = new HashSet<>();
         char[] a = s.toCharArray();
         int start = 0, end = 0;
         int max = Integer.MIN_VALUE;
         int n = s.length();
         while (end <n) {
-            if (!set.contains(a[end])) {
+           
                 set.add(a[end]);
-            }
+            
             int length = end - start + 1;
             if (length == set.size()) {
                 max = Math.max(max, length);
